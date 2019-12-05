@@ -14,7 +14,7 @@ strcmp(str1,str2)  equal ===> 0
   right is added to left
 */
 
-
+//functions ==> banking
 
 void main()
 {
