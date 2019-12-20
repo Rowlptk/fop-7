@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table in HTML</title>
+    <style>
+        table,th,td {
+            border: 2px dotted red;
+            border-collapse: collapse;
+            
+        }
+        table {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <table border=1>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Full Marks</th>
+            <th>Obtained Marks</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Ram Prasad</td>
+            <td>100</td>
+            <td>89</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2.</td>
+            <td rowspan="2">Shyam Prasad</td>
+            <td>100</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            
+            <td colspan="2">150</td>
+            
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td></td>
+            <td>120</td>
+            <td>45</td>
+        </tr>
+    </table>
+</body>
+</html>
