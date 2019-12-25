@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web PAge Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4;
+        }
+        #header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        #sidebar {
+            width: 29%;
+            float: right;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        #main {
+            /* border: 2px solid red; */
+            width: 69%;
+            float: left;
+        }
+
+        .text-center{
+            display: block;
+            text-align: center;
+        }
+        .clr {
+            clear: both;
+        }
+
+        #footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .card {
+            border: 1px solid #dca;
+            background: #f4f4a4;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+       <h1>My Website</h1>
+       <p>Just Another Website</p> 
+    </header>
+
+    <aside id="sidebar" class="card">
+        <h3>Navigation</h3>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>Contact US</h3>
+        <ul>
+            <li><strong>Address:</strong> 50 Main st, Boston MA</li>
+            <li><strong>Phone:</strong> (555) 555-5555</li>
+            <li><strong>Email:</strong> me@somethingcool.com</li>
+        </ul>
+    </aside>
+
+    <main id="main">
+        <section id="welcome" class="card">
+            <h2>Welcome To Our Website</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cupiditate, sunt voluptas distinctio ad eveniet nulla repudiandae sed quisquam sit ipsa labore magni. Fuga laborum laboriosam iusto molestias nostrum. Ratione. <br>
+                <a href="#" class="text-center">Click For More</a>
+            </p>
+        </section>
+        <section id="blog">
+            <h2>From Our Blog</h2>
+            <article>
+                <h3>Article One</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur voluptate ea tempora incidunt ratione!</p>
+            </article>
+            <article>
+                <h3>Article Two</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur voluptate ea tempora incidunt ratione!</p>
+            </article>
+        </section>
+    </main>
+    <div class="clr"></div>
+    <footer id="footer">
+        <p class="text-center">Copyright &copy; My Website 2019</p>
+    </footer>
+</body>
+</html>
+
+
