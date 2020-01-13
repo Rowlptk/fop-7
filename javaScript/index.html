@@ -7,7 +7,31 @@
 </head>
 <body>
 	
-	<h1></h1>
-	<script src="app.js"></script>
+    <h1>my name is brad , Brad brad Brad bRad BRaD</h1>
+    <input type="text" name="" id="in1" placeholder="replace">
+    <input type="text" name="" id="in2"
+    placeholder="replaceby">
+    <button onclick = "myReplace();">Replace</button>
+
+
+    <script>
+        function myReplace()
+        {
+            let old = document.querySelector('#in1').value;
+            let new1 = document.querySelector('#in2').value;
+            let str = document.querySelector('h1').innerText;
+            let re = new RegExp(old, "gi");
+            //val = str1.replace(/brad/gi,'nissan');
+            let newStr = str.replace(re,new1);
+            document.querySelector('h1').innerText = newStr;
+        }
+
+    </script>
+    <script src="array.js"></script>
+    <!-- <script src="templateString.js"></script> -->
+    <!-- <script src="string.js"></script> -->
+    <!-- <script src="math.js"></script> -->
+    <!-- <script src="type_casting.js"></script> -->
+	<!-- <script src="app.js"></script> -->
 </body>
 </html>
