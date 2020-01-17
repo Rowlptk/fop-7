@@ -11,6 +11,20 @@ val = numbers[5];
 
 numbers[6] = 6;
 
+// Mutating arrays
+// Adding on to end
+numbers.push(1000);
+// Adding on to front
+numbers.unshift(120);
+// Splice
+numbers.splice(3,0,900);
+// Take off from end
+numbers.pop();
+// Take off from end
+numbers.shift();
+// splice for remove
+numbers.splice(2,1); 
+
 // array, object, date, if,, forEach, for/in
 // DOM
 
