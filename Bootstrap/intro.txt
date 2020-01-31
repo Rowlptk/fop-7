@@ -1,0 +1,7 @@
+bootstrap ==>  html, css, js ==> framework
+third party css, js
+
+download ==> 
+CDN ==> Content delivery network
+
+getbootstrap.com

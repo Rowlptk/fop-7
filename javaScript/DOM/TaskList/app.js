@@ -13,8 +13,48 @@ loadEventListeners();
 function loadEventListeners() {
     // Add task Event
     form.addEventListener('submit', addTask);
+    // Remove task event
+    taskList.addEventListener('click', removeTask);
+    // Clear task event
+    clearBtn.addEventListener('click', clearTasks);
+    // filter task event
+    filter.addEventListener('keyup', filterTasks);
 }
-    
+
+// filter Tasks
+function filterTasks(e) {
+    const text = e.target.value.toLowerCase();
+
+    const li = document.querySelectorAll('.collection-item');
+    li.forEach(function(task) {
+        const item = task.firstChild.textContent.toLowerCase();
+        if(item.indexOf(text) != -1)
+        {
+            task.style.display = 'block';
+        }
+        else
+        {
+            task.style.display = 'none';
+        }
+    })
+}
+
+
+// Clear task
+function clearTasks() {
+    taskList.innerHTML = '';
+}
+
+// Remove task
+function removeTask(e) {
+    if(e.target.parentElement.classList.contains('delete-item')) {
+        if(confirm('Are you Sure?')) {
+            e.target.parentElement.parentElement.remove();
+        }
+    } 
+}
+
+// Add task
 function addTask(e) {
     if (taskInput.value === '')
     {
