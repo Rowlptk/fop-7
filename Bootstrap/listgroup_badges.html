@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Boiler Plate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container" ">
+       
+        <!-- list-group -->
+        <ul class="list-group">
+            <li class="list-group-item"><a href="#">Link 1</a></li>
+            <li class="list-group-item"><a href="#">Inbox
+                <span class="badge badge-danger">23</span>
+            </a></li>
+            <li class="list-group-item"><a href="#">Link 3</a></li>
+        </ul>
+
+        <!-- breadcrumb -->
+        <ol class="breadcrumb mt-3">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Users</a></li>
+            <li class="breadcrumb-item"><a href="#">Sadhit</a></li>
+        </ol>
+
+        <!-- form -->
+        <form action="#">
+            <div class="form-group">
+                <label for="usr">Username</label> 
+                <input type="text" id="usr" class="form-control">  
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label> 
+                <input type="password" id="pwd" class="form-control">  
+            </div>
+            <input type="submit" value="Login" class="btn btn-outline-danger">
+        </form>
+
+        <!-- alert -->
+        <div class="alert alert-danger alert-dismissable mt-3">
+            <button class="close" data-dismiss="alert">
+                <span >&times;</span>
+            </button>
+            Your Form is <strong>Rejected.</strong>
+        </div>
+
+        <!-- progress-bar -->
+        <div class="progress">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:70%;">
+                70% complete
+            </div>
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:20%;">
+                20% complete
+            </div>
+        </div>
+        <button class="btn btn-danger mt-3" id="change">click</button>
+
+
+
+    </div>
+
+    <div style="height: 400px;"></div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    document.querySelector('#change').addEventListener('click', addTen);
+    function addTen() {
+        const progressBar = document.querySelector('.progress-bar');
+        progressBar.style.width = '80%';
+        progressBar.textContent = '80% complete';
+    }
+</script>
+</body>
+</html>
