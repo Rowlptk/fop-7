@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Method</title>
+</head>
+<body>
+    <p>Lorem, ipsum dolor. 1</p>
+    <p>Lorem, ipsum dolor. 2</p>
+    <p>Lorem, ipsum dolor. 3</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('p').on({
+            click: function() {
+                $(this).css("color","red");
+            },
+            dblclick: function() {
+                $(this).css("color", "black");
+            },
+            mouseenter: function() {
+                $(this).css("fontSize", "1.2rem");
+            },
+            mouseout: function() {
+                $(this).css("fontSize", "16px");
+            }
+        })
+    })
+</script>
+
+
+
+</body>
+</html>
