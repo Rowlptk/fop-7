@@ -1,0 +1,42 @@
+<!-- angularjs ==> js framework ==> MVC
+MVC ==> M ==> model ==> data 
+V ==> view
+C ==> controller
+
+SPA ==> Single page web application
+
+download ==> 
+CDN ==> content Delivery Network -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<!-- ng- ==> directives ng-app, ng-controller, ng-bind, ng-include, ng-repeat, ng-init-->
+<body ng-app="myApp" ng-controller="myCtrl">
+    <input type="text" ng-model="demo">
+    <h1 ng-bind="demo"></h1>
+    <p>Hello I'm {{demo}} from {{school}}</p>
+
+    <div ng-include="'welcome.html'" style="border: 1px solid red; text-align: center;">
+    </div>
+    <ul>
+        <li ng-repeat="fruit in fruits">{{fruit}}</li>
+    </ul>
+    <hr>
+    <input type="text" ng-model="firstName" ng-init="firstName='Ravan'">
+
+    <script>
+        let app = angular.module('myApp',[]);
+        app.controller('myCtrl', function($scope) {
+            $scope.demo = "Niket";
+            $scope.school = "Sainik school";
+            $scope.fruits = ['apple','orange','banana','mango','grapes','watermelon', 'guauva', 'strawbery'];
+        })
+    </script>
+</body>
+</html>
+

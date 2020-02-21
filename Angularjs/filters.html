@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angularjs filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <h1>{{str}}</h1>
+            <h1>{{str | uppercase}}</h1>
+            <h1>{{str | lowercase}}</h1>
+
+            <h1>{{money | currency}}</h1>
+            <h1>{{money*113.94 | currency:'NPR'}}</h1>
+            <h1>{{money*0.77 | currency:'&pound;'}}</h1>
+
+            <h1>{{today | date}}</h1>
+            <h1>{{today | date:'y-M-d'}}</h1>
+            <h1>{{today | date:'shortDate'}}</h1>
+            
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="animal in animals | filter:search">{{animal}}</li>
+            </ul>
+        </div>
+    </div>
+    
+    form states and validation, spa==> angular-routing
+
+    <script>
+        let app = angular.module('myApp',[]);
+        app.controller('myCtrl', function($scope) {
+            $scope.str = 'Hello World!';
+            $scope.money = 100;
+            $scope.today = new Date();
+            $scope.animals = ['lion','tiger','leopard','goat','dog','cow','horse','cat','elephant','giraffe','monkey','zebra'];
+        })
+    </script>
+</body>
+</html>

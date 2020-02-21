@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form states</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <!-- $valid, $invalid, $dirty, $pristine, $touched, $untouched -->
+    <!-- .ng-valid,.... -->
+</head>
+<body ng-app="">
+    <form name="myForm" novalidate>
+        <input type="text" ng-model="in1" name="myIn" required placeholder="valid">
+        <br> <span>Valid: {{myForm.myIn.$valid}}</span>
+
+
+        <br> <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
