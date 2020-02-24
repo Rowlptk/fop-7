@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form states</title>
+    <style>
+        input.ng-valid {
+            background-color: green;
+        }
+        input.ng-invalid {
+            background-color: red;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <!-- $valid, $invalid, $dirty, $pristine, $touched, $untouched -->
     <!-- .ng-valid,.... -->
@@ -12,6 +20,11 @@
     <form name="myForm" novalidate>
         <input type="text" ng-model="in1" name="myIn" required placeholder="valid">
         <br> <span>Valid: {{myForm.myIn.$valid}}</span>
+        <br> <span>InValid: {{myForm.myIn.$invalid}}</span>
+        <br> <span>Dirty: {{myForm.myIn.$dirty}}</span>
+        <br> <span>Pristine: {{myForm.myIn.$pristine}}</span>
+        <br> <span>Touched: {{myForm.myIn.$touched}}</span>
+        <br> <span>Untouched: {{myForm.myIn.$untouched}}</span>
 
 
         <br> <input type="submit" value="Submit">
